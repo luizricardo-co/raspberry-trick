@@ -1,13 +1,20 @@
-7inch screen enable
+# 7inch screen enable
 
-1. enter on /boot/config.txt
+Enter on config.txt
 
-2. check disable_overscan is uncomment, by default is #disable_overscan=1
- - uncomment
+```sh
+sudo nano /boot/config.txt
+```
+
+check if disable_overscan is comment, by default is #disable_overscan=1 and uncomment
+
+```sh
 disable_overscan=1
+```
 
-3. copy and paste commands bellow on bottom file
+copy and paste commands bellow on end file
 
+```sh
 #7 inch HDMI LDC screen
 max_usb_current=1
 hdmi_force_hotplug=1
@@ -17,3 +24,10 @@ hdmi_mode=87
 hdmi_drive=1
 hdmi_cvt 1020 600 60 6 0 0 0
 gpu_mem=256
+```
+
+and the last
+
+```sh
+sudo reboot
+```

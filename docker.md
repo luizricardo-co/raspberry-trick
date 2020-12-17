@@ -1,23 +1,53 @@
-install docker on raspbian for raspberry 3b+ and 4
+# 7inch screen enable
 
-1. Install Docker
+Enter on config.txt
+
+```sh
+sudo nano /boot/config.txt
+```
+
+# install docker on raspbian for raspberry 3b+ and 4
+
+Install Docker
+
+```sh
 curl -sSL https://get.docker.com | sh
+```
 
-2. Add permission to Pi User to run Docker Commands
+Add permission to Pi User to run Docker Commands
+
+```sh
 sudo usermod -aG docker pi
+```
 
-3. Reboot 
-sudo reboot 
+Reboot
 
-4. Test Docker installation
+```sh
+sudo reboot
+```
+
+Test Docker installation
+
+```sh
 docker run hello-world
+```
 
-5. Install proper dependencies
+Install proper dependencies
+
+```sh
 sudo apt-get install -y libffi-dev libssl-dev
-
 sudo apt-get install -y python3 python3-pip
-
 sudo apt-get remove python-configparser
+```
 
-6. Install Docker Compose
+Install Docker Compose
+
+```sh
 sudo pip3 -v install docker-compose
+```
+
+Reboot
+
+```sh
+sudo reboot
+```
